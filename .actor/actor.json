@@ -1,36 +1,39 @@
 {
-    "actorSpecification": 1,
-    "name": "singapore-sme-directory-scraper",
-    "title": "Singapore SME Directory Scraper",
-    "description": "Extract verified Small and Medium Enterprises (SMEs), startups, and local businesses across Singapore. Premium B2B leads.",
-    "version": "1.0",
-    "input": "./input_schema.json",
-    "dockerfile": "./Dockerfile",
-    "minMemoryMbytes": 1024,
-    "maxMemoryMbytes": 4096,
-    "pricingModel": "PAY_PER_EVENT",
-    "pricingEvents": [
-        {
-            "eventName": "apify-actor-start",
-            "pricePerEvent": 0.25,
-            "description": "Base fee for starting the crawler (Playwright overhead)"
-        },
-        {
-            "eventName": "lead-extracted",
-            "pricePerEvent": 0.003,
-            "description": "Charged per Singapore SME lead successfully extracted ($3.00 per 1k leads)"
-        }
-    ],
-    "isPublic": true,
-    "seoTitle": "Singapore SME Scraper | SG Business Leads Extractor",
-    "seoDescription": "Scrape verified SMEs, IT services, and logistics companies in Singapore. Extract phone numbers, addresses, and UEN details for B2B sales in SE Asia.",
-    "categories": [
-        "LEAD_GENERATION",
-        "BUSINESS"
-    ],
-    "defaultRunOptions": {
-        "build": "latest",
-        "timeoutSecs": 1800,
-        "memoryMbytes": 4096
+  "actorSpecification": 1,
+  "name": "singapore-sme-directory-scraper",
+  "title": "Singapore SME Directory Scraper",
+  "description": "Extract verified Small and Medium Enterprises (SMEs), startups, and local businesses across Singapore. Premium B2B leads.",
+  "version": "1.0",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "minMemoryMbytes": 1024,
+  "maxMemoryMbytes": 4096,
+  "pricingModel": "PAY_PER_EVENT",
+  "pricingEvents": [
+    {
+      "eventName": "apify-actor-start",
+      "pricePerEvent": 0.25,
+      "description": "Base fee for starting the crawler (Playwright overhead)"
+    },
+    {
+      "eventName": "lead-extracted",
+      "pricePerEvent": 0.003,
+      "description": "Charged per Singapore SME lead successfully extracted ($3.00 per 1k leads)"
     }
+  ],
+  "isPublic": true,
+  "seoTitle": "Singapore SME Scraper | SG Business Leads Extractor",
+  "seoDescription": "Scrape verified SMEs, IT services, and logistics companies in Singapore. Extract phone numbers, addresses, and UEN details for B2B sales in SE Asia.",
+  "categories": [
+    "LEAD_GENERATION",
+    "BUSINESS"
+  ],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 1800,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
 }
